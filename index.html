@@ -50,7 +50,7 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
 </script>
 
 <script>
-	var evt = element.ownerDocument.createEvent('MouseEvents');
+	var evt = document.createEvent("MouseEvents");
     evt.initMouseEvent( "click", true,true,window,0,0,0,0,0,false,false,false,false,0, true );
     var v = document.getElementById("video");
     v.dispatchEvent(evt);
