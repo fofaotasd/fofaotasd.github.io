@@ -20,7 +20,7 @@ Note: I take no responsibilty for any damages caused by using this code
 <body>
 <!-- HTML5 video sourced from http://www.808.dk/?code-html-5-video -->
 <div id="TopVideoContainer">
-	<video class="StretchtoFit" loop autoplay preload="auto">
+	<video id="video" class="StretchtoFit" loop autoplay preload="auto">
 		<source src="https://github.com/fofaotasd/fofaotasd.github.io/raw/master/videos/fofaofinal.mp4" type="video/mp4" />
   		<source src="https://github.com/fofaotasd/fofaotasd.github.io/raw/master/videos/fofaofinal.webm" type="video/webm" />
 	</video>
@@ -50,22 +50,10 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
 </script>
 
 <script>
- function simulateClick() {
-      var event = new MouseEvent('click', {
-        'view': window,
-        'bubbles': true,
-        'cancelable': true
-      });
-      var cb = document.getElementById('player'); 
-      var canceled = !cb.dispatchEvent(event);
-      if (canceled) {
-        // A handler called preventDefault.
-        alert("canceled");
-      } else {
-        // None of the handlers called preventDefault.
-        alert("not canceled");
-      }
-    }
+var video = document.getElementById('video');
+video.addEventListener('click',function(){
+  video.play();
+},false);
 </script>
 </div>
 </body>
