@@ -48,6 +48,25 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
   ga('send', 'pageview');
 
 </script>
+
+<script>
+ function simulateClick() {
+      var event = new MouseEvent('click', {
+        'view': window,
+        'bubbles': true,
+        'cancelable': true
+      });
+      var cb = document.getElementById('player'); 
+      var canceled = !cb.dispatchEvent(event);
+      if (canceled) {
+        // A handler called preventDefault.
+        alert("canceled");
+      } else {
+        // None of the handlers called preventDefault.
+        alert("not canceled");
+      }
+    }
+</script>
 </div>
 </body>
 </html>
