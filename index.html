@@ -46,26 +46,8 @@ window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.
 
   ga('create', 'UA-60178660-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
-<script>
- function simulateClick() {
-      var event = new MouseEvent('click', {
-        'view': window,
-        'bubbles': true,
-        'cancelable': true
-      });
-      var cb = document.getElementById('video'); 
-      var canceled = !cb.dispatchEvent(event);
-      if (canceled) {
-        // A handler called preventDefault.
-      } else {
-        // None of the handlers called preventDefault.
-      }
-    }
-simulateClick();
-</script>
 </div>
 </body>
 </html>
